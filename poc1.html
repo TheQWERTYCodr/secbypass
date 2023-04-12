@@ -8,6 +8,14 @@
         f.style.height='99%';
         document.body.appendChild(f);
       }
+      window.addEventListener('message',(e)=>{
+        if (e.data==true) {
+          window.frames[0].contentWindow.postMessage(document.body.innerHTML.toString());
+        } else {
+          document.body.innerHTML = e.data;
+        }
+      },true);
+      window.parent.postMessage(true);
     </script>
   </body>
 </html>
