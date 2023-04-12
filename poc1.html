@@ -2,21 +2,21 @@
   <body>
     <script>
       window.onload=()=>{
+        document.body.innerHTML='<iframe src="'+window.location.toString()+'"></iframe>';
+      }
+      /*window.onload=()=>{
         var f = document.createElement('iframe');
         f.src = window.location;
-        f.style.width='99%';
-        f.style.height='99%';
+        f.style.width='90%';
+        f.style.height='90%';
         document.body.appendChild(f);
       }
-      window.addEventListener('message',(e)=>{
-        alert(e.data);
-        if (e.data==true) {
-          window.frames[0].contentWindow.postMessage(document.body.innerHTML.toString());
-        } else {
-          document.body.innerHTML = e.data;
+      function f(x) {
+        if (x.parent) {
+          window.document.body.innerHTML = f(x.parent);
         }
-      },true);
-      window.parent.postMessage(true);
+      }
+      window.document.body.innerHTML = f(window);*/
     </script>
   </body>
 </html>
