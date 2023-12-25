@@ -1,8 +1,14 @@
 <html>
   <body>
+    <style>
+      iframe {
+        width:90%;
+        height: 90%;
+      }
+    </style>
     <script>
       window.onload=()=>{
-        setTimeout(()=>{document.body.innerHTML='<iframe src="'+window.location.toString()+'"></iframe>';},3000);
+        setInterval(()=>{document.body.innerHTML+='<iframe src="'+window.location.toString()+'"></iframe>';},3000);
       }
       /*window.onload=()=>{
         var f = document.createElement('iframe');
