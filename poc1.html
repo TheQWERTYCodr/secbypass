@@ -2,7 +2,7 @@
   <body>
     <script>
       window.onload=()=>{
-        document.body.innerHTML='<iframe src="'+window.location.toString()+'"></iframe>';
+        setTimeout(()=>{document.body.innerHTML='<iframe src="'+window.location.toString()+'"></iframe>';},3000);
       }
       /*window.onload=()=>{
         var f = document.createElement('iframe');
